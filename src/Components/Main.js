@@ -18,11 +18,10 @@ export default class Main extends Component {
         for (var i = 0; i < rows.length; i++) {
           var row = table.insertRow(-1);
           var cells = rows[i].split(",");
-          console.log(cells[2]);
 
           for (var j = 0; j < cells.length; j++) {
             var cell = row.insertCell(-1);
-            cell.innerHTML = cells[j].replace(/"/g, "");
+            cell.innerHTML = cells[j].replace(/"/g, "").split("T0").shift();
           }
         }
         var CSV = document.getElementById("CSV");

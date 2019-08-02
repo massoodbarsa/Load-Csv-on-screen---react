@@ -11,6 +11,10 @@
   border-radius: 5px;
 }
 
+input:focus {
+  outline: none;
+
+}
 #upload {
   background-color: deepskyblue;
   border-radius: 5px;
