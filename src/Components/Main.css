@@ -1,0 +1,57 @@
+.main {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  padding: 20px;
+  margin: 30px 10px;
+  background-color: mediumblue;
+  border-radius: 5px;
+}
+
+#upload {
+  background-color: deepskyblue;
+  border-radius: 5px;
+}
+
+#CSV {
+  display: flex;
+  background-color: cyan;
+  justify-content: center;
+  margin: 0 30px;
+  border-radius: 5px;
+}
+table {
+  margin: 20px 20px;
+}
+
+table tr:first-child {
+  font-weight: bold;
+}
+table td {
+  padding: 10px;
+  margin: 0 20px;
+}
+
+button {
+  margin: 20px 20px;
+  padding: 10px;
+  width: 40%;
+  border: 1px solid slategray;
+  border-radius: 5px;
+  font-weight: bold;
+}
+button:hover {
+  background-color: black;
+  color: #fff;
+}
+button:active {
+  background-color: black;
+  color: rgb(172, 17, 17);
+}
+
+button:focus {
+  outline: none;
+}
