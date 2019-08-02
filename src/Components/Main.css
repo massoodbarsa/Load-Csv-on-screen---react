@@ -15,6 +15,9 @@ input:focus {
   outline: none;
 
 }
+p{
+  color: #fff
+}
 #upload {
   background-color: deepskyblue;
   border-radius: 5px;

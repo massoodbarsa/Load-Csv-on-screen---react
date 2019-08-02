@@ -69,6 +69,8 @@ export default class Main extends Component {
       return (
         <div className="main">
           <div className="input">
+          <p>Choose the CSV file from your computer</p>
+
             <input
               id="upload"
               type="file"
@@ -83,6 +85,8 @@ export default class Main extends Component {
       return (
         <div className="main">
           <div className="input">
+          <p>Choose the CSV file from your computer</p>
+
             <input
               id="upload"
               type="file"
