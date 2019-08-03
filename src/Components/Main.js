@@ -67,38 +67,31 @@ export default class Main extends Component {
     }
   };
 
+  renderUpside() {
+    console.log("bivin shod");
+
+    return (
+      <div className="input">
+        <p>Choose the CSV file from your computer</p>
+        <input
+          id="upload"
+          type="file"
+          name="file"
+          onChange={e => this.onChange(e)}
+        />
+      </div>
+    );
+  }
+
   render() {
     const { load } = this.state;
     if (load === false) {
-      return (
-        <div className="main">
-          <div className="input">
-            <p>Choose the CSV file from your computer</p>
-
-            <input
-              id="upload"
-              type="file"
-              name="file"
-              onChange={e => this.onChange(e)}
-            />
-          </div>
-        </div>
-      );
+      return <div className="main">{this.renderUpside()}</div>;
     }
     if (load === true) {
       return (
         <div className="main">
-          <div className="input">
-            <p>Choose the CSV file from your computer</p>
-
-            <input
-              id="upload"
-              type="file"
-              name="file"
-              onChange={e => this.onChange(e)}
-            />
-          </div>
-
+          {this.renderUpside()}
           <div id="CSV" />
           <div>
             <button onClick={() => this.sort()}>
