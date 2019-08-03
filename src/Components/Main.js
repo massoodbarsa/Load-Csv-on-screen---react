@@ -11,7 +11,7 @@ export default class Main extends Component {
 
     if (typeof FileReader != "undefined") {
       let reader = new FileReader();
-      reader.onload = function(e) {
+      reader.onload = e => {
         let table = document.createElement("table");
         let rows = e.target.result.split("\n");
 
