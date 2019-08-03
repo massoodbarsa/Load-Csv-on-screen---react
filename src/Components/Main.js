@@ -42,7 +42,7 @@ export default class Main extends Component {
   };
 
   sort = () => {
-    var table, rows, switching, i, x, y, shouldSwitch;
+    let table, rows, switching, i, x, y, shouldSwitch;
     table = document.getElementById("CSV").getElementsByTagName("table")[0];
     switching = true;
 
@@ -68,7 +68,8 @@ export default class Main extends Component {
   };
 
   render() {
-    if (this.state.load === false) {
+    const { load } = this.state;
+    if (load === false) {
       return (
         <div className="main">
           <div className="input">
@@ -84,7 +85,7 @@ export default class Main extends Component {
         </div>
       );
     }
-    if (this.state.load === true) {
+    if (load === true) {
       return (
         <div className="main">
           <div className="input">
