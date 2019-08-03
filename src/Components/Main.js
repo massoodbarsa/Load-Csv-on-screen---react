@@ -7,24 +7,27 @@ export default class Main extends Component {
   };
 
   onChange = e => {
-    var fileUpload = document.getElementById("upload");
+    let fileUpload = document.getElementById("upload");
 
     if (typeof FileReader != "undefined") {
-      var reader = new FileReader();
+      let reader = new FileReader();
       reader.onload = function(e) {
-        var table = document.createElement("table");
-        var rows = e.target.result.split("\n");
+        let table = document.createElement("table");
+        let rows = e.target.result.split("\n");
 
-        for (var i = 0; i < rows.length; i++) {
-          var row = table.insertRow(-1);
-          var cells = rows[i].split(",");
+        for (let i = 0; i < rows.length; i++) {
+          let row = table.insertRow(-1);
+          let cells = rows[i].split(",");
 
-          for (var j = 0; j < cells.length; j++) {
-            var cell = row.insertCell(-1);
-            cell.innerHTML = cells[j].replace(/"/g, "").split("T0").shift();
+          for (let j = 0; j < cells.length; j++) {
+            let cell = row.insertCell(-1);
+            cell.innerHTML = cells[j]
+              .replace(/"/g, "")
+              .split("T0")
+              .shift();
           }
         }
-        var CSV = document.getElementById("CSV");
+        let CSV = document.getElementById("CSV");
         CSV.innerHTML = "";
         CSV.appendChild(table);
       };
@@ -69,7 +72,7 @@ export default class Main extends Component {
       return (
         <div className="main">
           <div className="input">
-          <p>Choose the CSV file from your computer</p>
+            <p>Choose the CSV file from your computer</p>
 
             <input
               id="upload"
@@ -85,7 +88,7 @@ export default class Main extends Component {
       return (
         <div className="main">
           <div className="input">
-          <p>Choose the CSV file from your computer</p>
+            <p>Choose the CSV file from your computer</p>
 
             <input
               id="upload"
@@ -97,7 +100,6 @@ export default class Main extends Component {
 
           <div id="CSV" />
           <div>
-            {" "}
             <button onClick={() => this.sort()}>
               Filter the results based on minimal issue
             </button>
